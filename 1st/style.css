@@ -1,0 +1,86 @@
+/*
+ * HTML과 CSS는 매칭관계
+ * 한 HTML에 다수의 CSS를 적용할 수 있음
+ */
+
+/*
+ * selector (선택자)
+ * 특정 HTML을 지목
+ */
+html {
+  /*
+   * HTML 요소를 HTML 문서의 루트 요소
+   */  
+}
+body {
+    /*
+     * 폰트 변경
+     * font-family
+     * 속성명: 속성값
+     * 속성값 (폰트명)
+     * APPLE SD Gothic NEO (MacOS, iOS)
+     * 맑은고딕, 맑은 고딕, malgun gothic (기본)
+     * 한중일 (CJK Font)
+     * 안드로이드 2.x대 - Droid sans (영문용)
+     * 안드로이드 4.x대 ~ 현재 - Roboto (영문)
+     - Droid Sans Fallback
+     - 삼성고딕
+     - LG스마트고딕
+     - 베가고딕
+     * Noto sans
+     * 안드로이드 7.x대 ~ 되도록이면 Noto sans 강제
+     * 돋움, dotum
+     * 굴림, Gulim
+     * Generic Font
+     * serif (삐침이 있는, 명조)
+     * sans-serif (삐침이 없는, 고딕)
+     * monospace (고정폭)
+     */
+    font-family: "Helvetica NEUE", sans-serif;
+    /*
+     * font-size
+     * 값 : 단위
+     * px : 픽셀
+
+     * em : 자기 자신의 폰트 사이즈를 비례해서 증가
+     * 만약 font-size 속성에 em 단위를 쓴 경우
+     * 이 단위는 부모 요소의 폰트사이즈에 비례한다
+     * 1em === 16px(html 요소의 폰트 사이즈)
+     * 0.1em = 1.6px
+     * 0.05em = 0.8px
+     * 0.06em = 0.96px
+     * 0.065em = 1px
+     * 0.01em = 0.16px
+     * 1px = ?
+
+     * rem = 루트 요소의 폰트 사이즈를 기준으로
+     * 1rem === 16px (무조건 html 요소의 폰트 사이즈)
+     * 브라우저 지원율이 낮아요
+     * IE9부터 부분 지원
+
+     * % = 부모요소의 폰트사이즈에 비례
+     * 100% = 16px
+     */
+    font-size:1em;
+    /*
+     * line-height : 행간
+     */
+    line-height:1.8em;
+}
+h1 {
+    /*
+    * body 요소의 폰트사이즈를 기준으로 증가
+     * 2em = 32px
+     */
+    font-size:2em;
+
+    /*
+     * 2em은 몇일까?
+     * 자기 자신의 폰트사이즈를 기준으로 함
+     * 2em = 64px
+     * padding:2em;
+     */
+}
+p {
+
+}
