@@ -31,7 +31,7 @@
 4. CSS 파일과 연동시킵니다. (Link 요소 사용)
 5. CSS를 작성합니다 (width, height, padding, border, margin, background, float 사용)
 6. 디자인과 일치하는 지 확인합니다.
-7. HTML Validator와 CSS Validator를 돌려봅니다.
+7. HTML Validator(https://validator.w3.org/#validate_by_input)와 CSS Validator(https://jigsaw.w3.org/css-validator/#validate_by_input)를 돌려봅니다.
 8. 저에게 코드를 E-mail로 보냅니다. (apes0123@gmail.com)
 9. 코드리뷰를 받습니다.
 10. 끝
