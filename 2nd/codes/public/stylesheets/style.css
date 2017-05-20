@@ -1,0 +1,104 @@
+/*
+ * body 
+ * font
+ */
+
+body {
+  font-family: "Helvetica NEUE", sans-serif;
+  background: #eeeeee;
+}
+
+/*
+ * article
+ */
+
+article {
+  /* width를 넣어줄 게 아니라
+   * 최대 width를 넣어줌 */
+  max-width: 500px;
+  padding: 20px;
+  margin: 20px auto;
+  border:1px solid #efefef;
+  background: #ffffff;
+}
+
+/*
+ * class selector
+ */
+.author-area {
+  /* height를 넣어줌 */
+  height: 80px;
+}
+.author-area .thumb {
+  /* 왼쪽에 붙이겠다 */
+  float: left;
+  /* 가로너비 */
+  width: 80px;
+  /* 높이 */
+  height: 80px;
+  /* 로딩 전 배경 */
+  background: #eeeeee;
+}
+.author-area .thumb img {
+  /* 가로 너비 */
+  width: 80px;
+  /* 세로 높이 */
+  height: 80px;
+}
+.author-area .info {
+  /*
+   * padding: <위아래> <좌우>;
+   * padding: <상하좌우>;
+   */
+  padding:10px 15px;
+  /* Layout 할 때 더 DEEP */
+  /* Float의 오른쪽에 있는 친구에 넣는 거 */
+  overflow: hidden;
+}
+.author-area .name {
+  /* 사이간격을 아래로만 */
+  padding-bottom: 3px;
+}
+/* 공통 코드 */
+.author-area a {
+  text-decoration: none;
+}
+.author-area a:hover {
+  text-decoration: underline;
+}
+.author-area .name a {
+  color: royalblue;
+}
+.author-area .desc a {
+  color: gray;
+}
+.text-area {
+  font-size:14px;
+  line-height:1.5;
+}
+.media-area {
+  padding-bottom: 20px;
+}
+.media-area img {
+  /*
+   * width에 %를 넣으면
+   * 부모요소의 가로사이즈를 기준
+   * 부모요소의 width: 320px;
+   * 자식요소의 width: 100% = 320px
+   */
+  width: 100%;
+}
+.social-area {
+  /*
+   * border
+   * 외곽선 굵기
+   * 외곽선 타입
+   * 외곽선 컬러
+   */
+  border-top:1px solid #eeeeee;
+}
+.social-area button {
+  padding:0;
+  border:0;
+  background:none;
+}
