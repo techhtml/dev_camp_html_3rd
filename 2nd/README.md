@@ -8,16 +8,24 @@
 * Node.js는 Backend (서버) 영역을 위한 JS
 * 워드프레스 (PHP => Node.js)
 
-### 지금까지 한것
+### 웹 서버 구축법 (express)
 1. node.js를 설치
 2. terminal을 실행 (명령 프롬프트를 실행)
 3. `node --version`
 4. `npm --version`
 5. `sudo npm install express-generator -g`
 5.1. `npm install express-generator -g`
-6. `express --view=hbs 폴더명`
+6. `express --view=hbs 폴더명` (폴더명을 띄어쓰기 ㄴㄴ)
 7. `cd 폴더명 && npm install`
 8. `npm start`
+9. 포트 번호(localhost:3000)는 `bin/www` 안에서 수정이 가능함
+10. 수정후에는 반드시 재실행 (`npm start`를 다시 해주어야함)
+
+* cd (change directory)
+* cd 폴더명
+
+* cmd + c / ctrl + c 
+* (프로세스 종료)
 
 ## Codelabs
 * 1번은 같이
@@ -35,3 +43,24 @@
 8. 저에게 코드를 E-mail로 보냅니다. (apes0123@gmail.com)
 9. 코드리뷰를 받습니다.
 10. 끝
+
+### 업계
+* 프로그래머
+* HTML / CSS - 웹 퍼블리셔 (2007년 / 신현석)
+    * HTML / CSS를 다루는 사람은 웹 전반에 걸쳐서 협업할 수 있고 리딩할 수 있기 때문에
+    * 도서를 출판할 때 총 매니저인 퍼블리셔와 동일하다고 생각하였다.
+* HTML / CSS를 다루는 사람은 여러 직군 사이에 껴서 영원히 고통받음.
+* HTML / CSS를 다루는 (웹 퍼블리셔)를 개발자로 취급을 안하는 인식
+    * 해외사례
+        * 구글 (UX Engineer)
+        * 디자이너가 만든 디자인을 바탕으로 최적의 인터렉션과 사용성을 제작해냄
+* 이 직군의 평균 연봉이 굉장히 낮음
+* 프론트엔드개발자를 지향
+    * HTML / CSS / JS 먼저 배우시고
+    * 백엔드(기초 지식) => 프론트엔드
+* HTML / CSS는 쉬워요.
+    * 이 과정은 쉬워요 => 어려워요로 바뀌는 과정
+    * 정답이 없어서 힘듬
+
+### 질문
+apes0123@gmail.com

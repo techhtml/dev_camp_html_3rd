@@ -6,8 +6,4 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/event', function(req, res, next) {
-  res.render('event', { title: 'Express' });
-});
-
 module.exports = router;
