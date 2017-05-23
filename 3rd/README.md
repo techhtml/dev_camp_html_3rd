@@ -4,6 +4,10 @@
 * http://unicode.org/emoji/charts/full-emoji-list.html
 * gist
 * https://gist.github.com
+* 실습중 사이트 :
+* http://slowalk.co.kr/
+* 과제 사이트 :
+* https://www.hanokmaeul.or.kr/
 
 ## HTML Contents Model (30 min)
 * 문서를 만들기 위해서 있는 언어
@@ -54,6 +58,7 @@
 * 프레이싱 콘텐츠(phrasing content)
     * 텍스트 레벨의 모든 것
     * (쉽게 생각하면) 줄바꿈 안되는 것들
+    * 대표적인 inline 요소들
     *  a abbr area (if it is a descendant of a map element) audio b bdi bdo br button canvas cite code data datalist del dfn em embed i iframe img input ins kbd keygen label map mark math meter noscript object output picture progress q ruby s samp script select small span strong sub sup svg template textarea time u var video wbr text
 
 * 임베디드 콘텐츠 (embedded content)
@@ -192,9 +197,52 @@
 
 ## CSS (1 hour 30 min)
 ### CSS Cascading & Inherit
+* CSS (Cascading Style Sheet)
+* 스타일에 관한 시트
+* Cascading
+    * 폭포수가 흐르는 형태
+    * 조상으로부터 내려오는 성질(스타일)
+    * <div class="wrapper">
+    *   <div class="child"></div>
+    * </div>
+    * .wrapper { font-family: sans-serif }
+    * .wrapper { width: 500px }
+    * .child { width: 1000px }
+* inherit
+    * 의도적 상속
+    * 특정 HTML 요소에 미리 지정된 CSS가 있을 때,
+      이 CSS를 override 시키고 싶을 때
+
+### CSS Display model
+* 한 요소가 문맥 전체를 관통할 때
+    * block
+    * width, height, padding, border, margin
+    * p (문장)
+    * div
+    * article
+    * h1
+* 한 요소가 문맥의 일부를 차지할 때
+    * inline
+    * padding, margin, line-height
+    * span
+    * strong (강조)
+    * a (링크)
+
 ### CSS Background
 ### CSS Color
 ### CSS Fonts
+
+## 작업 환경 세팅
+### express-generator로 새 작업환경 세팅해오기 (과제)
+### sass 개발환경 세팅 (gulp)
+### express 라우팅 개념 설명 (서브페이지)
+
+## 우리 LESS 쓰나요?
+* 안써요
+* 업데이트가 많이 안되고 있는 상태
+* LESS에서 제공하는 모든 기능을 SASS에서 제공을 함
+* 근데 SASS가 더 기능이 많음
+* SASS 쓸 정도면 LESS도 잘 쓸 수 있음
 
 ## 참고자료
 **[HTML]**
