@@ -239,14 +239,19 @@ $ sudo npm install gulp-cli -g
 $ npm install gulp -D
 > 설치
 
-$ touch gulpfile.js
-> gulpfile이라는 게 생성이 됨
-> gulpfile.js를 vs code 등에서 실행
+> VS Code에서 gulpfile.js 생성
+> gulpfile.js를 VS Code 등에서 실행
 > 복붙
 
 $ npm install gulp-sass gulp-sourcemaps gulp-base64 gulp-postcss autoprefixer -D
 $ mkdir public/sass
-> sass 폴더 안에 main.scss 파일 생성
+> sass 폴더 안에 style.scss 파일 생성
+
+$ gulp
+> gulp가 돌아요
+
+$ npm start
+> 서버 실행
 ```
 
 ## 실습해보기
