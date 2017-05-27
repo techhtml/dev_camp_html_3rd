@@ -58,6 +58,7 @@
     * 활자가 나타나는 형태 (FONT)
     * 문단 혹은 글줄이 나타나는 형태 (TEXT)
     * 가나다
+    * 폰트 최적화 : https://spoqa.github.io/2015/10/14/making-spoqa-han-sans.html
 
 * font-family
     * 어떤 폰트를 사용할 지
