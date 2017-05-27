@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            height:100%;
+        }
+        body {
+            height:100%;
+            /*
+             * background-image 사용할 떄 유의할 점
+             * 이미지가 충분히 느리게 로딩될 수 있다
+             * base64기반 인코딩으로 전환하면 속도가 빨라짐
+             * 모바일 모든 브라우저 다 지원
+             */
+            background-image: url(https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-0/p206x206/16427585_1263454757070833_8140443784435139608_n.jpg?oh=88397689429b54c243357024ecf4047e&oe=59B25CB1);
+            /*
+             * background-repeat
+             * 기본값 : repeat (반복)
+             * 반복안함 : no-repeat
+             * X축반복 : repeat-x
+             * Y축반복 : repeat-y
+             */
+            background-repeat: no-repeat;
+            /*
+             * background-color
+             * 이미지가 (크기의 한계로) 표현하지 못하는 나머지 영역을 해당 색상으로 채워요
+             * 
+             */
+               background-color:#eeeeee; 
+            /*
+             * background-position
+             * 해당 배경이미지를 특정 위치로 이동
+             * top, left, right, bottom, center
+             * sprite image
+             * background-position-x
+             * background-position-y
+             * background-position: 
+                <background-position-x> 
+                <background-position-y>
+             */
+             background-position:center center;
+             /*
+              * background-size
+              * background-size:
+              *   <background-size-x>
+              *   <background-size-y>
+              *   <background-keyword>
+              * cover
+              *  실제 이미지 배율에 맞게 늘어나거나 줄어들거나
+              * contain
+              *  실제 이미지 배율에 맞게 늘어나나,
+              *  화면을 다 채우지 않고, 이미지가 전체 다 브라우저에 보이도록
+              */
+              background-size:cover;
+        }
+        body {
+            background:none;
+            color: #333333;
+        }
+        a {
+            color:inherit;
+        }
+        input {
+            color: inherit;
+            border:1px solid currentColor;
+        }
+        div {
+            width:300px;
+            color: white;
+            background: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Chicken Chicken Chicken
+        Chicken Chicken Chicken
+        Chicken Chicken Chicken
+        Chicken Chicken Chicken
+    </div>
+</body>
+</html>

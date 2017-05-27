@@ -228,22 +228,6 @@
     * strong (강조)
     * a (링크)
 
-### CSS Background
-### CSS Color
-### CSS Fonts
-
-## 작업 환경 세팅
-### express-generator로 새 작업환경 세팅해오기 (과제)
-### sass 개발환경 세팅 (gulp)
-### express 라우팅 개념 설명 (서브페이지)
-
-## 우리 LESS 쓰나요?
-* 안써요
-* 업데이트가 많이 안되고 있는 상태
-* LESS에서 제공하는 모든 기능을 SASS에서 제공을 함
-* 근데 SASS가 더 기능이 많음
-* SASS 쓸 정도면 LESS도 잘 쓸 수 있음
-
 ## 참고자료
 **[HTML]**
 * https://www.w3.org/TR/html51/dom.html#content-models
