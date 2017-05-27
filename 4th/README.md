@@ -58,7 +58,7 @@
     * 활자가 나타나는 형태 (FONT)
     * 문단 혹은 글줄이 나타나는 형태 (TEXT)
     * 가나다
-    * 폰트 최적화 : https://spoqa.github.io/2015/10/14/making-spoqa-han-sans.html
+    * 폰트 최적화 : https://spoqa.github.io/2015/10/14/making-spoqa-han-sans.htm"
 
 * font-family
     * 어떤 폰트를 사용할 지
@@ -150,6 +150,104 @@
 ### sass 개발환경 세팅 (gulp)
 #### (좀 빠르지만) post-css setting
 ### express 라우팅 개념 설명 (서브페이지)
+
+# UI 개발자, UX 엔지니어 스택
+* HTML 작성
+* SCSS 작성 (SASS)
+* gulp
+    * SCSS => CSS
+    * 최적화 (이미지, CSS, 압축)
+* express (페이지단위 UI구현)
+
+# 작업환경 세팅 순서
+## express 세팅
+* $는 복붙 ($ 제외하고)
+* >는 결과
+Mac 
+```
+$ ls
+> 폴더구조
+
+$ mkdir <폴더명> 
+$ cd <폴더명>
+$ ls
+> 폴더구조
+
+$ node --version
+> 버전정보 (안뜨면 node.js 설치 누락)
+
+$ npm --version
+> 버전정보 (안뜨면 node.js 설치 누락)
+
+$ sudo npm install express-generator -g
+> express 생성기를 글로벌로 설치
+
+$ express --view=hbs <폴더명>
+> 뭔가 진행
+
+$ cd <폴더명> && npm install
+> 뭔가 설치됨
+
+$ npm start
+> 서버가 실행됨 (포트는 3000)
+> localhost:3000
+```
+
+Windows
+```
+$ dir
+> 폴더구조
+
+$ mkdir <폴더명> 
+$ cd <폴더명>
+$ dir
+> 폴더구조
+
+$ node --version
+> 버전정보 (안뜨면 node.js 설치 누락)
+
+$ npm --version
+> 버전정보 (안뜨면 node.js 설치 누락)
+
+$ npm install express-generator -g
+> express 생성기를 글로벌로 설치
+
+$ express --view=hbs <폴더명>
+> 뭔가 진행
+
+$ cd <폴더명> && npm install
+> 뭔가 설치됨
+
+$ npm start
+> 서버가 실행됨 (포트는 3000)
+> localhost:3000
+```
+
+## gulp 세팅
+* gulp는 여러분들이 해도 상관없는데 귀찮은 것을 대신해줘요.
+    * 압축 (minify)
+    * 이미지를 base64로 변경해줌
+    * SCSS를 CSS로 변경해줌
+
+Windows && MAC
+1. gulp-cli 설치
+```
+$ sudo npm install gulp-cli -g
+> (맥한정) 비밀번호 입력
+> 설치
+
+$ npm install gulp -D
+> 설치
+
+$ touch gulpfile.js
+> gulpfile이라는 게 생성이 됨
+> gulpfile.js를 vs code 등에서 실행
+> 복붙
+
+$ npm install gulp-sass gulp-sourcemaps gulp-base64 gulp-postcss autoprefixer -D
+$ mkdir public/sass
+> sass 폴더 안에 main.scss 파일 생성
+```
 
 ## 실습해보기
 ### 유튜브 UI를 만들어봅시다
