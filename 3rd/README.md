@@ -36,7 +36,8 @@
     *  a abbr address area (if it is a descendant of a map element) article aside audio b bdi bdo blockquote br button canvas cite code data datalist del details dfn div dl em embed fieldset figure footer form h1 h2 h3 h4 h5 h6 header hr i iframe img input ins kbd keygen label main map mark math menu meter nav noscript object ol output p picture pre progress q ruby s samp script section select small span strong sub sup svg table template textarea time u ul var video wbr text
 
 * sectioning content
-    * 제목의 범위를 나타냄
+    * outline을 생성하는 콘텐츠
+    * sectioning root로써 활용되는 콘텐츠
     *  article aside nav section
 <article>
     <h2>치킨이 맛있다.</h2>
