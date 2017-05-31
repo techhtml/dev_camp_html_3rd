@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+         * 높이를 모름.
+         * 1. height를 고정값을 줘서 해결할 수 있다.
+         * 2. overflow (flow를 초과한 콘텐츠를 처리)
+         * 3. clear 사용
+         */
+         .row {
+             width:720px;
+         }
+         .row:after { /* IE8부터 */
+             content:'';
+             display:block;
+             clear:both;
+         }
+        .profile-area {
+            float: left;
+        }
+        /* 600px */
+        .write-area {
+            float:left;
+            width: 80%;
+            /*
+             * padding
+             * 콘텐츠와 박스 사이 간격
+             */
+             padding: 10px;
+             /*
+              * box-sizing
+              */
+              box-sizing:border-box;
+        }
+        .more-area {
+            float: right;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="feed-box">
+        <!-- 모듈 네이밍 -->
+        <div class="row">
+            <!-- 왼쪽 -->
+            <div class="profile-area">
+                <img src="" alt="">
+                <strong>조은</strong>
+            </div>
+            <!-- 오른쪽 -->
+            <div class="more-area">
+                <time datetime="2017-05-30">5월 30일</time>
+            </div>
+        </div>
+        <div class="row">
+            <img src="" alt="">
+        </div>
+        <div class="row">
+            <div class="row">
+                <p class="dsc-like">biggiantant, me__sik__e, soqenjdb, su.jin___, archvold님이 좋아합니다</p>
+            </div>
+            <div class="row">
+                <p class="dsc-contents">wonny_log 간만에 강남역에서 #혼밥 !<br>#사케동 #먹스타그램</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="comments-write-area">
+                <div class="write-area">
+                    <button type="button">좋아요</button>
+                    <input>
+                </div>
+                <div class="more-area">
+                    <button type="button">더보기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
+    <header></header>
+    <!-- main content -->
+    <main>
+        <!-- 한줄로 나올 친구 -->
+        <div></div>
+
+        <!-- 한줄로 나올 친구 -->
+        <div></div>
+    </main>
+    <!-- footer -->
+    <footer></footer>
+</body>
+</html>

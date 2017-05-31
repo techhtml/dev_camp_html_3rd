@@ -124,5 +124,114 @@
 
 # CSS (1 hour 30 min)
 ## CSS Layout
-## CSS Position
-## CSS Values & Units
+* layout (배치)
+* 배치한다.
+* 쌓이는 구조.
+    * 특정한 것을 특정한 위치에 두는 것 (배치, 레이아웃)
+    * Normal Flow
+* 위에서부터 흐르는 구조
+    * 콘텐츠가 시작부터 끝까지 흐르는
+    * 레이아웃을 만든다 => 흐름을 바꾸는 것
+    * 레이아웃을 생성 => reflow
+* block formatting context
+    * 아래로 쌓이는 구조 (블록이)
+    * vertically
+    * width, height 다 내가 원하는대로
+    * <div>, <section>, <article>
+* inline formatting context
+    * 텍스트처럼 취급되는 것이 쌓이는 구조 (한줄로)
+    * horizental
+    * 가로 길이를 콘텐츠의 길이 (width)
+    * 높이를 행간만큼 (line-height)
+    * <span>, <storng>
+
+* float
+    * 이미지의 오른쪽이나 왼쪽에 텍스트를 노출시키기 위해 사용
+    * float? (부유)
+    * 특정 요소에 float를 넣으면 해당 요소를 부유하게 만듦
+    * 부모요소가 float된 자식의 높이를, 자식을 인식하지 못해요.
+    * float : left
+    * float : right
+    * 문제점
+    * 1. 유동형 레이아웃과 고정형 레이아웃이 결합되면 UI가 깨지기 쉽다.
+    * 2. 만약 0.1px이라도 계산을 잘못하면 레이아웃 깨짐
+
+* clear
+    * float된 요소의 다음 요소에 사용을 하며,
+    * float를 해체해주기 위해서 사용
+    * clear: left
+    * clear: right
+    * clear: both;
+
+* box model
+    * 모든 HTML 요소는 사각형 (box)
+    * 가로 사이즈 (width)
+    * 높이 (height)
+    * 외곽선 (border)
+    * 외곽선과 콘텐츠 사이 여백 (padding)
+    * 박스와 박스 사이 여백 (margin)
+    * 더하는 구조
+
+ --------
+|        |
+|        |
+ --------
+```
+.box {
+    width: 150px;
+    height: 150px;
+    padding: 25px;
+    border: 1px solid #000;
+    margin: 25px;
+}
+```
+
+* width
+* height
+* border
+    * border: 1px solid #000000;
+    * border: <border-width> <border-style> <border-color>
+    * border-width:1px 2px 3px 4px;
+    * border-style: solid;
+    * border-color: #000000;
+* padding
+    * 시계방향으로 속성값을 작성
+    * padding: <padding-top> <padding-right> <padding-bottom> <padding-left>
+    * padding: 15px 10px 5px 0;
+    * padding: 15px 0 10px;
+    * padding: 15px 5px;
+    * padding: 15px;
+* margin
+    * 만약 margin을 가진 요소
+    * 두 요소가 서로 vertical 관계라면
+    * margin은 병합됨
+    * 부모 - 자식 관계에서는 부모가 border도 없고 padding도 없는 경우
+    * float된 요소에서는 발생하지 X
+    * collasping margin
+    * 둘 중 큰 값을 따라감
+* 계산하기 어려움
+    * box-sizing
+    * box 사이즈를 width나 height를 최댓값으로 두고
+    * 나머지를 뺴는걸로
+    * 나머지
+    * box-sizing: content-box (나머지: X) (원래 상태)
+    * box-sizing: border-box (나머지: padding, border)
+
+* flexbox (이번 주 토요일)
+    
+## CSS Position (토요일)
+## CSS Values & Units (토요일)
+
+# 웹 퍼블리셔 vs 프론트엔드 개발자
+* Front-End Engineering
+    * UI / UX
+        * 웹 퍼블리셔 / HTML, CSS, 접근성 할 줄 아는 사람
+        * HTML & CSS & JavaScript(Interaction) 
+        * 버튼을 어느 크기로 만들어야 유저가 편히 쓸까 (Design, Engineer)
+        * 스와이프 애니메이션을 넣는데 가속도를 어떻게 넣을까? (Design, Engineer)
+    * Web Application
+        * JavaScript Only / HTML / CSS
+        * Angular, React, Backbone
+        * API와 UI를 매칭
+        * 적절한 시점에 적절한 UI를 보이게
+        * <?=DATA?>
