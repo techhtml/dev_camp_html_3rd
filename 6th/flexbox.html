@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            /*
+             * flexbox를 사용하겠다
+             */
+            display: flex;
+            /*
+             * 만약 아이템의 갯수가 초과했을 경우
+             * 아이템을 줄바꿈할 지
+             * flex-wrap
+             * 기본값 : nowrap
+             * wrap : 넘어가게 하겠다
+             */
+            flex-direction: row;
+           /*
+            * justify-content
+            * 요소의 메인 축(main axis) 정렬
+            * flex-start (기본값)
+            * flex-end
+            * center
+            * space-around
+            * space-between
+            */
+           /*
+            * align-items
+            * 요소의 서브 축(Cross axis) 정렬
+            * flex-start
+            * flex-end
+            * center
+            * stretch (기본값)
+            */
+            align-items: center;
+            background:royalblue;
+        }
+        /*
+         * flex 속성을 이용해서 분할
+         * .flex-items {
+         *   flex: 1;
+         * }
+         * .flex-items-2 {
+         *   flex: 2;
+         * }
+         */
+         .flex-items-2 {
+             flex:1;
+         }
+        .flex-items {
+            /*
+             * 아무리 못해도 개별 요소의 width가 25% 이상
+             * min-width:25%;
+             */
+            width:80px;
+            background: crimson;
+        }
+        /*
+         * 25%
+         * 20%
+         * 40%;
+         */
+    </style>
+</head>
+<body>
+    <!-- Container -->
+    <div class="flex-container">
+        <div class="flex-items">치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨치킨</div>
+        <div class="flex-items flex-items-2">피자</div>
+        <div class="flex-items">맥주</div>
+    </div>
+</body>
+</html>

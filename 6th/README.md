@@ -92,9 +92,48 @@ input:disabled ~ label {}
 * https://developers.google.com/web/fundamentals/design-and-ui/input/forms/
 
 ## CSS Position
+* 배치
+* static (정적)
+    * Normal Flow
+    * 내가 flow를 수정하고 싶어도 수정 불가능한 상태
+* Position을 사용하는 속성
+    * 아래 속성들을 사용하면 position container가 되고
+    * 특정한 좌표값의 루트로써 활용
+    * box offset 속성을 사용할 수 있게됨
+    * box offset
+        * left
+        * top
+        * right
+        * bottom
+        * z-index
+    * relative
+        * 겉보기에는 Static
+    * absolute
+        * 절대값 배치
+    * fixed
+        * 스크롤을 하던말던 계속 고정
+    * sticky
+        * 원래 위치에 있다가 브라우저가 해당 요소의 위치에 스크롤이 도달하면 fixed
+        * IE 빼고 다 지원
 
 ## CSS Flexbox
+* 레이아웃을 만듦
+    * Flexible Box
+    * 자유자재로 늘어나거나 줄어드는 Layout
+* flexbox
+    * 요소의 순서를 바꿀 수도 있고
+    * 요소가 자기 알아서 늘어나거나 줄어들도록
+    * IE 지원율 X
+    * Andorid 2.x 지원율 X
 
-## CSS Values & Units
+## CSS Values & Units (Next)
 
 ## Codelabs
+* 실습
+* gulp + express
+    * gulp-express (없어짐)
+    * express 기반
+* Youtube
+    * 비디오? (iFrame)
+    * 레이아웃?
+        * 특정 사이즈를 기준
