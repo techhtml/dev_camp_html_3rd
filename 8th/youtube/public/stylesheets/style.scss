@@ -1,0 +1,134 @@
+/*
+ * 행 (row)
+    * 3개의 row가 필요한 레이아웃
+ *  [                ]
+ *  [    ] [         ]
+ *  [                ]
+ */
+
+ /*
+  * 공통
+ * button
+ * thumb
+ */
+.btn {
+    display: inline-block;
+    padding: 5px 14px;
+    margin:0;
+    border:1px solid #999999;
+    font-size: 14px;
+    line-height: 16px;
+    background: #eeeeee;
+    text-align:center;
+    border-radius:2px;
+    color:#333333;
+    text-decoration: none;
+}
+.btn:hover {
+    background:#dddddd;
+}
+.btn-primary {
+    background: royalblue;
+    color:white;
+    border-color:royalblue;
+}
+.btn-primary:hover {
+    background: royalblue;
+}
+body {
+    padding-top:31px;
+    background: #efefef;
+}
+ .global--header {
+     display: flex;
+     justify-content: space-between;
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 30px;
+     padding:5px 7px;
+     background: #ffffff;
+     border-bottom:1px solid #eeeeee;
+     z-index:1100;
+     .logo-area {
+         display:flex;
+         .btn-menu {
+             padding: 0.5em;
+             margin: 0;
+             border: 0;
+             background: white;
+         }
+         .btn-menu:hover {
+             background:#eeeeee;
+         }
+         h1 {
+             font-size: 13px;
+         }
+     }
+     .search-area {
+         flex:1;
+         display:flex;
+         padding:0 15px;
+         .input--text {
+             flex: 1;
+             max-width:450px;
+             font: inherit;
+         }
+     }
+     .user-area {}
+ }
+ .global--wrapper {
+     padding-left:121px;
+ }
+ .contents {
+     max-width: 840px;
+     margin: auto;
+ }
+ .global--nav {
+     position: fixed;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     width: 120px;
+     padding-top:31px;
+     background: #ffffff;
+     border-right: 1px solid #eeeeee;
+     z-index: 1000;
+ }
+ .video-wrapper {
+     overflow:hidden;
+    .video-area {
+        position:relative;
+        float: left;
+        width: 70%;
+        height: 300px;
+        padding-top:400px;
+        background:gray;
+    }
+    .video {
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:400px;
+        background:blue;
+    }
+    .relative-area {
+        float: left;
+        width: 30%;
+        height: 800px;
+        background:#ffffff;
+    }
+ }
+ .video-wrapper-full {
+    position:relative;
+    .video-area {
+        position:static;
+    }
+    .relative-area {
+        margin-top:400px;
+    }
+  }
+ .global--footer {}
+
