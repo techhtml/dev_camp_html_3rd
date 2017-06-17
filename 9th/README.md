@@ -252,8 +252,144 @@ li {} // a=0, b=1 , 1점
 li.menu {} // a=1, b=1, 11점
 ```
 
-* CSS 미디어쿼리
+## CSS 미디어쿼리
+### 오해
+- 미디어쿼리가 반응형 웹 디자인의 가장 중요한 PART 중 하나이기는 함
+- 그렇다고 해서 미디어쿼리를 반응형 웹 디자인에만 쓰는 건 아님
 
-* CSS 방법론
+### 진실
+- 미디어쿼리는 유저가 접속하는 미디어의 형태에 따라서 다른 CSS를 주고 싶을 때 사용
+- 미디어
+  - screen
+  - print
+  - handheld - 옛날 PDA
+  - tv - 티비
+  - projection - 프로젝터
 
-* JavaScript (시간 되면)
+### 사용법
+```
+CSS:
+@media print {
+  // CSS를 씀
+}
+
+```
+
+### 미디어 특성
+* width (너비)
+* height (높이)
+* aspect-ratio (해상도)
+* orientation (눕혔는 지 세웠는 지)
+* color (색상)
+* resoultuon (픽셀 밀도)
+* device-width
+* device-height
+* device-aspect-ratio
+
+### 미디어 특성을 이용한 미디어 쿼리
+```
+CSS:
+@media (조건) {
+  // 조건이 맞으면
+}
+
+@media (width: 640px) {
+  // 브라우저 사이즈가 딱 640px
+}
+
+// Tablet
+@media (min-width: 720px) {
+  // 브라우저 사이즈가 720px보다 큰 경우
+  body {
+    font-size: 16px;
+  }
+}
+
+// 노트북 (랩탑)
+// 엄청 큰 스마트 패드 (아이패드 프로, Surface)
+@media (min-width: 1280px) {
+
+}
+
+// 데스크탑 (23인치 ~ 26인치)
+@media (min-width: 1920px) {
+  
+}
+
+// 엄청 큰 데스크탑 (27인치 이상)
+@media (min-width: 2540px) {
+  
+}
+
+@media (min-resoulution: 300dpi) {
+  // 모니터의 출력이 300dpi 이상인 곳에서만 얘가 동작
+  .header {
+    background:url("header@2x.png") 0 0 no-repeat;
+  }
+}
+
+```
+* Mobile First
+  * 콘텐츠의 배열이 Mobile => PC로 가는 것이 상대적으로 편함
+* 미디어 쿼리는 항상 CSS의 마지막 부분에 작성
+
+## CSS 방법론
+* CSS가 쉬운가요?
+  * CSS를 배우는 건 쉬운데 관리하고 쓰는 게 어려움
+
+```
+button {
+  display:inline-block;
+  padding: 1em;
+  margin: 0.5em;
+  font: inherit;
+  background: #eee;
+}
+.btn-alert {
+  padding: 3px 6px;
+  font-size:14px;
+  background: red;
+}
+```
+
+* 어떻게 하면 큰 단위의 CSS를 잘 관리할 수 있을까?
+* SMACSS
+  * Scalable Modular Architecture for CSS
+  * CSS를 카테고리로 쪼갬 (font관련된거면 font에 올인)
+    * Base (기본 / 공통)
+      * html {font-size:15px;}
+    * Layout (레이아웃)
+      * .row {}
+      * col을 12단계로 쪼개서...
+      * .col {float:left}
+      * .col-3 {width:25%}
+      * .col-4 {width:33.333333%}
+      * .col-6 {width:50%}
+      * .col-12 {width:100%}
+    * Module (탭, 커스텀 인풋)
+      * .tabs {}
+      * .tabs nav {}
+      * .tabs div {}
+    * State (클릭했을 때 ...)
+      * .btn:disabled {}
+      * .btn:active {}
+    * Theme (테마)
+      * .tabs--gray {}
+  * 어떤 걸 넣더라도 레이아웃이 깨지지 않게 하면 좋다 (==Layout)
+  * 어떤 거 (==Module)
+* OOCSS
+  * bootstrap
+  * bassCSS
+  * 똑같음...
+  * 스켙레톤하고 테마를 분리
+    * .btn {} // 스켈레톤
+    * .btn-default {} // 기본 테마
+    * .btn-warning {} // 중요한 버튼
+    * .btn-xs {}
+    * .btn-sm {}
+    * .btn-md {}
+    * .btn-lg {}
+    * .btn-xl {}
+
+## 자바스크립트
+  * 스펙 산정 잘 하는거
