@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .header {
+      height: 120px;
+      background: crimson;
+    }
+    .header--wrapper {
+      height:120px;
+    }
+    .header--fixed {
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+    }
+    p {
+      font-size:140px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header--wrapper">
+    <div class="header"></div>
+  </div>
+  <p>Document Document Document Document Document Document</p>
+  <script>
+    // 1. 윈도우에 스크롤이 발생할 때
+    // 2. header라는 클래스명을 가진 모든 요소
+    // 3. header라는 클래스명을 가진 요소의 상단 스크롤이 값이 
+    // 윈도우의 현재 스크롤 위치와 동일하다면
+
+    // IE7까지 동작함
+    var targetTop = $(".header").offset().top;
+    $(window).on("scroll", e => {
+      var scrollTop = window.scrollY;
+      if (scrollTop >= targetTop) {
+        $(".header").addClass("header--fixed");
+      } else {
+        $(".header").removeClass("header--fixed");
+      }
+    });
+
+    // IE10부터 동작함
+    var header = document.querySelector('.header');
+    var targetTop = header.offsetTop;
+    window.addEventListener("scroll", e => {
+      var scrollTop = window.scrollY;
+      if (scrollTop >= targetTop) {
+        header.classList.add("header--fixed");
+      } else {
+        header.classList.remove("header--fixed");
+      }
+    });
+  </script>
+</body>
+</html>

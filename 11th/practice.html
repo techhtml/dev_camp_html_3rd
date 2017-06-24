@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  <style>
+    .box {
+      width:100px;
+      height:100px;
+      background: crimson;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <button type="button">박스를 오른쪽으로</button>
+  <script>
+    var btn = document.querySelector("button");
+    var posX = 0;
+    btn.addEventListener("click", e => {
+      var box = document.querySelector('.box');
+      posX += 5;
+      box.setAttribute('style', 'transform:translate('+ posX + 'px, 0)');
+    })
+  </script>
+</body>
+</html>

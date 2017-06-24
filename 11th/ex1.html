@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 150px;
+      height: 150px;
+      background: crimson;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    
+  </div>
+  <script>
+    // 박스를 클릭하면 박스의 색상을 바꾸고 싶음
+    // 박스를 클릭하면 박스의 색상이 바뀌는 데
+      // 만약 박스가 빨간색이면 파란색으로
+      // 파란색이면 빨간색으로
+    // 스크립트 없이
+  // 박스는 1개
+  // 빨간색 상태 (status : red)
+  // 파란색 상태 (status : blue)
+    
+   // 1. 박스를 준비해봅시다.
+   var box = document.querySelector(".box");
+
+   // 1.1. 박스의 현재 상태
+   var boxStatus = "crimson";
+
+   // 2. 박스를 클릭했을 때
+   box.addEventListener('click', e => {
+     // 만약...
+     if (boxStatus === "crimson") {
+       // 3. 박스를 조작
+       box.setAttribute('style', 'background:royalblue');
+       // 3.1. 박스의 상태도 조작
+       boxStatus = "royalblue";
+     } else if (boxStatus === "royalblue") {
+       box.setAttribute('style', 'background:crimson');
+       boxStatus = "crimson";
+     }
+   })
+
+    /*
+     * 준비물
+     * 박스
+     * 색상
+     */
+
+  </script>
+</body>
+</html>

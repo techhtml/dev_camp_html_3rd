@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .dot {
+      position:absolute;
+      width:1px;
+      height:1px;
+      background:red;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    window.addEventListener('mousemove', e=> {
+      var div = document.createElement('div');
+      div.className = 'dot';
+      div.setAttribute('style', `top:` + e.offsetY + 'px; left:' + e.offsetX + 'px');
+      document.body.appendChild(div);
+    })
+  </script>
+</body>
+</html>
