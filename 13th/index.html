@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>콘텐츠</title>
+  <style>
+
+    @keyframes fade {
+      0% {
+        transform:translate(0, 30px);
+        opacity:0;
+      }
+      100% {
+        transform:translate(0, 0);
+        opacity:1;
+      }
+    }
+    .fade-off {
+      transform:translate(0, 30px);
+      opacity:0;
+    }
+    .center {
+      position:absolute;
+      width:180px;
+      left:50%;
+      top:50%;
+      transform:translate(-50%, -50%);
+      text-align:center;
+    }
+    .center h1 {
+      margin:0;
+      animation:0.5s fade cubic-bezier(.08,.68,.37,.89);
+      animation-fill-mode: forwards;
+    }
+    .center h2 {
+      margin:0;
+      animation:0.5s fade cubic-bezier(.08,.68,.37,.89);
+      animation-delay:0.15s;
+      animation-fill-mode: forwards;
+    }
+    .lnk-area {
+      animation:0.5s fade cubic-bezier(.08,.68,.37,.89);
+      animation-delay:0.35s;
+      animation-fill-mode: forwards;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <h1 class="fade-off">iPad Pro</h1>
+    <h2 class="fade-off">어제의 능력을<br>가볍게 뛰어넘다.</h2>
+    <div class="lnk-area fade-off">
+      <a href="#">동영상 보기</a>
+      <a href="#">키노트 시청하기</a>
+    </div>
+  </div>
+</body>
+</html>

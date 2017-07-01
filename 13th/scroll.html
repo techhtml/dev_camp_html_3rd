@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin:0;
+    }
+    .panel {
+      width:100%;
+      height:100vh;
+      padding:1em;
+      box-sizing:border-box;
+    }
+    .panel:nth-of-type(4n - 3) {
+      background:palegreen
+    }
+    .panel:nth-of-type(4n - 2) {
+      background: palevioletred
+    }
+    .panel:nth-of-type(4n - 1) {
+      background: rosybrown
+    }
+    .panel:nth-of-type(4n) {
+      background: wheat
+    }
+    @keyframes fade {
+      0% {
+        transform:translate(0, 60px);
+        opacity: 0;
+      }
+      100% {
+        transform:translate(0, 0);
+        opacity: 1;
+      }
+    }
+    p {
+      transform:translate(0, 60px);
+      opacity: 0;
+      transition:1s all ease-in-out;
+    }
+    .activate p {
+      animation: 1s fade ease-in-out;
+      transform:translate(0,0);
+      opacity:1;
+    }
+    .bar {
+      height:50px;
+      background:linear-gradient(to right, #2ac1bc 20%, transparent 21%);
+      /* background:radial-gradient(#2ac1bc 20%, transparent 21%); */
+      background-size:14px 14px;
+      transition:0.5s all ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel panel-1">
+    <div class='bar'></div>
+  </div>
+  <div class="panel panel-2">
+    <p>아무리 힘든 일이라도 새로운 iPad Pro는 척척 해냅니다, 그것도 가뿐하게. 대부분의 PC 노트북보다 훨씬 더 강력할 뿐만 아니라, 쓰기에도 훨씬 간편하죠. 새롭게 설계된 Retina 디스플레이는 보는 것도, 터치하는 것도 놀라움 그 자체입니다. 게다가 세상에서 가장 앞선 모바일 운영체제인 iOS가 이 모든 걸 뒷받침해준다는 사실. 당신이 첨단 컴퓨팅에 바라는 그 모든 것, 그리고 그 이상. 바로 iPad Pro입니다.</p>
+  </div>
+  <div class="panel panel-3">3</div>
+  <div class="panel panel-4">4</div>
+  <div class="panel panel-5">5</div>
+  <div class="panel panel-6">6</div>
+  <div class="panel panel-7">7</div>
+  <script>
+
+    function panel2Action(scrollMiddle) {
+      var panel = document.querySelector('.panel-2');
+      var panelTop = panel.offsetTop;
+
+      if(scrollMiddle > panelTop) {
+        panel.classList.add('activate');
+      }
+      if(scrollMiddle < panelTop) {
+        panel.classList.remove('activate');
+      }
+    }
+    
+    window.addEventListener('scroll', function(e) {
+      /*
+       * 스크롤이 될 때
+       */
+       var scrollTop = window.pageYOffset;
+       var scrollMiddle = scrollTop + (window.innerHeight / 2);
+       var scrollBottom = scrollTop + window.innerHeight;
+
+       panel2Action(scrollMiddle);
+    })
+  </script>
+</body>
+</html>
