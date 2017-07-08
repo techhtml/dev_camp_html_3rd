@@ -272,6 +272,75 @@
     * `background-position`
       * 배경의 위치
       * x값, y값
+  * CSS Animation & Trnasform & Transition
+    * animation
+      * CSS로 애니메이션을 만드는 것
+      * `@keyframes`
+        * 애니메이션의 동작을 설정
+      * `animation`
+        * 애니메이션이 얼마동안 움직일 거고
+        * 어떤 Timing function을 가질거고
+    * transition
+      * A에서 B로 바뀌는 상태를 애니메이션화
+      * `transition: <시간> <속성> <타이밍 함수>`
+    * transform
+      * 변형
+      * 이동 `translate(X축, Y축)`
+      * 회전 `rotate(각도)`
+      * 크기조정 `scale(정수)`
+      * reflow를 발생시키지 않기 때문에 성능적 이점이 크다.
+
+### 레이아웃
+* 전통적인 방법
+  * Float를 사용하는 방법
+    * Float는 원래 레이아웃을 만들기 위한 속성이 X
+    * 웹에서......... IE에서는... Float 밖에 안먹음.
+    * 사실상 웹에서는 어쩔 수 없이 사용
+    * `float:left`
+    * `float:right`
+* 모던한 방법
+  * flex를 사용하는 방법
+    * flex에는 main-axis와 cross-axis
+    * 메인축을 기준으로 요소가 쌓이는 구조
+    * 요소의 크기가 알아서 조정되기도 한다.
+    * flex 속성으로 기본적으로 float가 제공하는 모든 기능을 다 사용 가능
+    * `display:flex` - 부모요소
+    * `justify-content` : 메인축 정렬
+      * `flex-start` - 시작점
+      * `flex-end` - 끝점
+      * `center` - 중앙
+      * `space-around` - 좌우 여백을 가진 상태
+      * `space-between` - 좌우 여백이 없는 상태
+    * `align-items` : 크로스축 정렬
+      * `flex-start` - 시작점
+      * `flex-end` - 끝점
+      * `center` - 중앙 (vertical 중앙 정렬 가능한 건 얘밖에 없음)
+      * `stretch` - 늘어남
+    * `flex-direction` : 축 변경
+      * `row` - 자식요소가 한 행을 따라서 한 줄로 쌓임
+      * `column` - 자식요소가 한 줄씩 쌓여요
+      * `row-reverse` - 반대로 쌓임
+      * `column-reverse` - 반대로 쌓임
+    * 자식요소에 `flex` 속성을 부여할 수 있음.
+      * `div {display:flex}`
+      * `div span {flex:1}`
+        * div 내에 있는 모든 span의 가로사이즈는 동일
+      * `div span:nth-of-type(2) { flex: 2 }`
+        * div 내에 있는 span 중 2번째 자식은 다른 요소에 비해 2배 큼
+* 포지션
+  * `position` 속성은 박스의 지오메트리를 어떻게 지정할 지 결정
+    * `fixed`
+      * 브라우저에 고정하는 속성값
+    * `absolute`
+      * 부모요소 중 Position 속성을 이용하는 요소의 영점을 기준으로 이동
+      * 부모요소 중 어떤 요소도 Position을 사용하지 않는다면...
+        * body요소가 기준이 됨
+    * `relative`
+      * 자기자신을 기준으로 이동
+    * `static` (기본값)
+      * 안이동 (포지션을 쓰지 않겠다)
+* Grid (얘는 생략)
+  * https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Grid_Layout
 
 * 회사에서 웹 UI 개발자가 어떻게 일하는가
 * 회사

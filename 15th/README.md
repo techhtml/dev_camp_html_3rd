@@ -331,3 +331,55 @@ EXAMPLE 16:
 ## 레퍼런스
 * http://www.wah.or.kr/Participation/guide.asp
 * https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA
+* https://github.com/h5bp/Front-end-Developer-Interview-Questions/tree/master/Translations/Korean
+
+## ETC
+* SEO (Search Engine Optimization / 검색이 잘 되게)
+  * 구글 SEO
+    * robots.txt 제공
+    * 사이트의 마크업 구조를 잘 짜면 OK
+    * 퍼포먼스 고민을 잘하면 OK
+    * Google Ananlytics
+
+* 웹앱만들기
+  * React던 Angular던 Vue던 프론트엔트 프레임웤을 쓰는 걸 권장
+  * 라우팅을 뻇어서 프론트엔드에서만 페이지가 전환되도록
+  * Progressive Web Apps (PWA)
+    * 웹을 앱처럼 사용하자
+    * service worker
+    * web manifest
+    * https://developers.google.com/web/ilt/pwa/
+    * https://developers.google.com/web/fundamentals/design-and-ui/browser-customization/
+
+* 웹팩
+  * 프론트엔드 배울 때 쓰시면 됨
+  * 여러개의 파일을 하나로 묶어주는 역할
+
+* SVG
+  * `<svg>` 요소를 이용해서 svg 코드를 import 해올 수 있음.
+  * https://css-tricks.com/using-svg/
+
+* SCSS 활용법에 대해 좀 더 알고싶다.
+  * variables (변수)
+  * import (포함)
+  * mixin
+
+```
+
+@mixin transform($posX, $posY) {
+  -moz-transform: translate($posX, $posY);
+  -webkit-transform: translate($posX, $posY);
+  transform: translate($posX, $posY);
+}
+
+.btn {
+  @include transform(0, 0);
+}
+```
+
+* CSS 커스텀 속성
+  * 상용화 단계 X
+  * 아직 쓰기에는 시기가 적절하지 못하다
+  * https://brunch.co.kr/@techhtml/27
+
+* 자바스크립트 관련된 내용은 생략 !
